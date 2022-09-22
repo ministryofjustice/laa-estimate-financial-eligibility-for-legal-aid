@@ -190,17 +190,6 @@ workflows:
           requires:
             - run_specs
             - linters
-#      - install_dependencies
-#      - linters:
-#          requires:
-#            - install_dependencies
-#      - run_specs:
-#          requires:
-#            - install_dependencies
-      - build_and_push_to_ecr
-#          requires:
-#            - run_specs
-#            - linters
       - deploy_uat:
           context: laa-estimate-eligibility-uat
           requires:
@@ -215,14 +204,6 @@ workflows:
             branches:
               only: main
       - linters:
-          requires:
-            - install_dependencies
-      - run_specs:
-      - install_dependencies
-      - linters:
-          filters:
-            branches:
-              only: main
           requires:
             - install_dependencies
       - run_specs:
