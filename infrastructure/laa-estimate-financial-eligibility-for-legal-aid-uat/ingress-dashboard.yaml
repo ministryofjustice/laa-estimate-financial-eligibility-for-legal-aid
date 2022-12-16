@@ -479,7 +479,7 @@ data:
               "refId": "Prometheus-namespace-Variable-Query"
             },
             "refresh": 1,
-            "regex": "/^laa-estimate-financial-eligibility-for-legal-aid-uat/",
+            "regex": "/^laa-estimate-financial-eligibility-for-legal-aid/",
             "skipUrlSync": false,
             "sort": 1,
             "tagValuesQuery": "",
