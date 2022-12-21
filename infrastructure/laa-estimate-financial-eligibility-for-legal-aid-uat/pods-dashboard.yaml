@@ -394,7 +394,11 @@ data:
         "list": [
           {
             "allValue": null,
-            "current": {},
+            "current": {
+              "selected": false,
+              "text": "laa-estimate-financial-eligibility-for-legal-aid-uat",
+              "value": "laa-estimate-financial-eligibility-for-legal-aid-uat"
+            },
             "datasource": "Prometheus",
             "definition": "label_values(kube_deployment_metadata_generation, namespace)",
             "hide": 0,
@@ -407,9 +411,38 @@ data:
             "refresh": 1,
             "regex": "/^laa-estimate-financial-eligibility-for-legal-aid/",
             "skipUrlSync": false,
-            "sort": 0,
+            "sort": 1,
             "tagValuesQuery": "",
             "tags": [],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+          },
+          {
+            "current": {
+              "selected": false,
+              "text": "main-laa-estimate-eligibility",
+              "value": "main-laa-estimate-eligibility"
+            },
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "definition": "label_values(nginx_ingress_controller_requests{exported_namespace = \"$namespace\"}, ingress)",
+            "hide": 0,
+            "includeAll": false,
+            "multi": false,
+            "name": "ingress",
+            "options": [],
+            "query": {
+              "query": "label_values(nginx_ingress_controller_requests{exported_namespace = \"$namespace\"}, ingress)",
+              "refId": "Prometheus-ingress-Variable-Query"
+            },
+            "refresh": 1,
+            "regex": "",
+            "skipUrlSync": false,
+            "sort": 1,
+            "tagValuesQuery": "",
             "tagsQuery": "",
             "type": "query",
             "useTags": false
